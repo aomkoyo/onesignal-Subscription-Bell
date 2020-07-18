@@ -93,7 +93,7 @@ welcomeNotification: {
      "url": "https://www.animejapanth.com" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
 }
 ```
-###### 
+###### กำหนดขนาด เช่น `small`, `medium`, `large`
 ```javascript
 notifyButton: {
         ...
