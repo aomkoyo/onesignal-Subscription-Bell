@@ -84,3 +84,12 @@ text: {
        'dialog.blocked.message': "ทำตามคำแนะนำเหล่านี้เพื่ออนุญาตการแจ้งเตือน:"
 }
 ```
+
+###### ข้อความสำหรับคนกดติดตาม
+```javascript
+welcomeNotification: {
+     "title": "ขอบคุณ",
+     "message": "ขอบคุณสำหรับการติดตาม!",
+     "url": "https://www.animejapanth.com" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
+}
+```
