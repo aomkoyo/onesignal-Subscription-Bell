@@ -66,3 +66,21 @@ colors: { // Customize the colors of the main button and dialog popup button
          'dialog.button.foreground': '#fff'
 }
 ```
+
+###### ตั่งค่าข้อความ
+```javascript
+text: {
+       'tip.state.unsubscribed': 'สมัครรับการแจ้งเตือน',
+       'tip.state.subscribed': "คุณสมัครรับการแจ้งเตือน",
+       'tip.state.blocked': "คุณได้ปิดกั้นการแจ้งเตือน",
+       'message.prenotify': 'คลิกเพื่อสมัครรับการแจ้งเตือน',
+       'message.action.subscribed': "ขอบคุณสำหรับการสมัคร!",
+       'message.action.resubscribed': "คุณสมัครรับการแจ้งเตือน",
+       'message.action.unsubscribed': "คุณจะไม่ได้รับการแจ้งเตือนอีก",
+       'dialog.main.title': 'จัดการการแจ้งเตือนของเว็บไซต์',
+       'dialog.main.button.subscribe': 'ติดตาม',
+       'dialog.main.button.unsubscribe': 'ยกเลิกการเป็นสมาชิก',
+       'dialog.blocked.title': 'เลิกบล็อกการแจ้งเตือน',
+       'dialog.blocked.message': "ทำตามคำแนะนำเหล่านี้เพื่ออนุญาตการแจ้งเตือน:"
+}
+```
