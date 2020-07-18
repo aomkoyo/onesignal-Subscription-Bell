@@ -8,58 +8,61 @@
 ##### Script
 ```javascript
 <script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "YOUR_APP_ID",
-      notifyButton: {
-        enable: true, /* Required to use the Subscription Bell */
-      /* SUBSCRIPTION BELL CUSTOMIZATIONS START HERE */
-        size: 'medium', /* One of 'small', 'medium', or 'large' */
-        theme: 'default', /* One of 'default' (red-white) or 'inverse" (white-red) */
-        position: 'bottom-right', /* Either 'bottom-left' or 'bottom-right' */
-        offset: {
-            bottom: '0px',
-            left: '0px', /* Only applied if bottom-left */
-            right: '0px' /* Only applied if bottom-right */
-        },
-        prenotify: true, /* Show an icon with 1 unread message for first-time site visitors */
-        showCredit: false, /* Hide the OneSignal logo */
-        text: {
-            'tip.state.unsubscribed': 'Subscribe to notifications',
-            'tip.state.subscribed': "You're subscribed to notifications",
-            'tip.state.blocked': "You've blocked notifications",
-            'message.prenotify': 'Click to subscribe to notifications',
-            'message.action.subscribed': "Thanks for subscribing!",
-            'message.action.resubscribed': "You're subscribed to notifications",
-            'message.action.unsubscribed': "You won't receive notifications again",
-            'dialog.main.title': 'Manage Site Notifications',
-            'dialog.main.button.subscribe': 'SUBSCRIBE',
-            'dialog.main.button.unsubscribe': 'UNSUBSCRIBE',
-            'dialog.blocked.title': 'Unblock Notifications',
-            'dialog.blocked.message': "Follow these instructions to allow notifications:"
-        },
-        colors: { // Customize the colors of the main button and dialog popup button
-           'circle.background': 'rgb(84,110,123)',
-           'circle.foreground': 'white',
-           'badge.background': 'rgb(84,110,123)',
-           'badge.foreground': 'white',
-           'badge.bordercolor': 'white',
-           'pulse.color': 'white',
-           'dialog.button.background.hovering': 'rgb(77, 101, 113)',
-           'dialog.button.background.active': 'rgb(70, 92, 103)',
-           'dialog.button.background': 'rgb(84,110,123)',
-           'dialog.button.foreground': 'white'
-         },
-        /* HIDE SUBSCRIPTION BELL WHEN USER SUBSCRIBED */
-        displayPredicate: function() {
-            return OneSignal.isPushNotificationsEnabled()
-                .then(function(isPushEnabled) {
-                    return !isPushEnabled;
-                });
-        }
-      }
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "{You APP ID}",
+            notifyButton: {
+                enable: true,
+                colors: { // Customize the colors of the main button and dialog popup button
+                'circle.background': '#ff3ff9',
+                'circle.foreground': '#fff',
+                'badge.background': '#ff3ff9',
+                'badge.foreground': '#fff',
+                'badge.bordercolor': '#fff',
+                'pulse.color': '#fff',
+                'dialog.button.background.hovering': '#ff9ff3',
+                'dialog.button.background.active': '#ff9ff3',
+                'dialog.button.background': '#ff3ff9',
+                'dialog.button.foreground': '#fff'
+                },
+                text: {
+                    'tip.state.unsubscribed': 'สมัครรับการแจ้งเตือน',
+                    'tip.state.subscribed': "คุณสมัครรับการแจ้งเตือน",
+                    'tip.state.blocked': "คุณได้ปิดกั้นการแจ้งเตือน",
+                    'message.prenotify': 'คลิกเพื่อสมัครรับการแจ้งเตือน',
+                    'message.action.subscribed': "ขอบคุณสำหรับการสมัคร!",
+                    'message.action.resubscribed': "คุณสมัครรับการแจ้งเตือน",
+                    'message.action.unsubscribed': "คุณจะไม่ได้รับการแจ้งเตือนอีก",
+                    'dialog.main.title': 'จัดการการแจ้งเตือนของเว็บไซต์',
+                    'dialog.main.button.subscribe': 'ติดตาม',
+                    'dialog.main.button.unsubscribe': 'ยกเลิกการเป็นสมาชิก',
+                    'dialog.blocked.title': 'เลิกบล็อกการแจ้งเตือน',
+                    'dialog.blocked.message': "ทำตามคำแนะนำเหล่านี้เพื่ออนุญาตการแจ้งเตือน:"
+                },
+            },
+            // Other init Options
+            welcomeNotification: {
+                "title": "You Title",
+                "message": "Thanks for subscribing!",
+                // "url": "" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
+            },
+        });
     });
-  });
-</script>
+```
+
+###### ตั่งค่าสี
+```javascript
+colors: { // Customize the colors of the main button and dialog popup button
+         'circle.background': '#ff3ff9',
+         'circle.foreground': '#fff',
+         'badge.background': '#ff3ff9',
+         'badge.foreground': '#fff',
+         'badge.bordercolor': '#fff',
+         'pulse.color': '#fff',
+         'dialog.button.background.hovering': '#ff9ff3',
+         'dialog.button.background.active': '#ff9ff3',
+         'dialog.button.background': '#ff3ff9',
+         'dialog.button.foreground': '#fff'
+}
 ```
