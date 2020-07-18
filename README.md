@@ -1,11 +1,11 @@
 # onesignal-Subscription-Bell
 
-##### LINK CDN
+LINK CDN
 ```javascript
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 ```
 
-##### Script
+Script
 ```javascript
 <script>
     window.OneSignal = window.OneSignal || [];
@@ -51,7 +51,8 @@
     });
 ```
 
-###### ตั่งค่าสี
+### การตั้งค่า
+ตั้งค่าสี
 ```javascript
 colors: { // Customize the colors of the main button and dialog popup button
          'circle.background': '#ff3ff9',
@@ -67,7 +68,7 @@ colors: { // Customize the colors of the main button and dialog popup button
 }
 ```
 
-###### ตั่งค่าข้อความ
+ตั้งค่าข้อความ
 ```javascript
 text: {
        'tip.state.unsubscribed': 'สมัครรับการแจ้งเตือน',
@@ -85,7 +86,7 @@ text: {
 }
 ```
 
-###### ข้อความสำหรับคนกดติดตาม
+ข้อความสำหรับคนกดติดตาม
 ```javascript
 welcomeNotification: {
      "title": "ขอบคุณ",
@@ -93,7 +94,7 @@ welcomeNotification: {
      "url": "https://www.animejapanth.com" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
 }
 ```
-###### กำหนดขนาด เช่น `small`, `medium`, `large`
+กำหนดขนาด เช่น `small`, `medium`, `large`
 ```javascript
 notifyButton: {
         ...
