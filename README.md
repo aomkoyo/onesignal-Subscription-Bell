@@ -103,4 +103,4 @@ notifyButton: {
 }
 ```
 
-ดูข้อมูลเพิ่มเติมได้ที่ OneSignal[link=`https://documentation.onesignal.com/docs/bell-prompt`]
+ดูข้อมูลเพิ่มเติมได้ที่ [OneSignal](https://documentation.onesignal.com/docs/bell-prompt)
