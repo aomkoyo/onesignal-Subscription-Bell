@@ -1,4 +1,7 @@
-# onesignal-Subscription-Bell
+## onesignal-Subscription-Bell
+
+ส่วนวิธีรับ APP ID ให้เข้าไปที่ [OneSignal](https://onesignal.com/) เเละเวลาคุณสร้างต้องทำเป็น ตั้งค่าโค้ดเอง
+
 
 LINK CDN
 ```javascript
